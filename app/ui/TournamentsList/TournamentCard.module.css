@@ -1,0 +1,38 @@
+.cardContainer {
+  border: 1px solid #ccc;
+  width: 450px;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.title {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 4px;
+}
+
+.detail {
+  color: #333;
+  font-size: 0.9em;
+  margin: 4px 0;
+}
+
+.detail strong {
+  font-weight: bold;
+}
+
+.prizes {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState, useContext } from "react";
-import AuthContext from "../contexts/AuthContext";
+import AuthContext from "../../contexts/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGooglePlusG,
@@ -9,9 +9,9 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { Button, TextField } from "@mui/material";
-import styles from "../login.module.css";
+import Link from "next/link";
 
-export default function Login() {
+export default function Auth() {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [registerName, setRegisterName] = useState("");
@@ -24,7 +24,6 @@ export default function Login() {
 
   const loginSubmitHandler = (e) => {
     e.preventDefault();
-    console.log("Componente Login: ");
     login({ email: loginEmail, password: loginPassword });
   };
 
@@ -47,34 +46,34 @@ export default function Login() {
           className="flex flex-col justify-center items-center h-full px-10 bg-white"
           onSubmit={registerSubmitHandler}
         >
-          <h1>Create Account</h1>
+          <h1 className="text-2xl">Create Account</h1>
           <div className="social-icons">
-            <a
+            {/* <Link
               href="#"
               className="icon inline-flex justify-center items-center  r w-10 h-10"
             >
               <FontAwesomeIcon icon={faGooglePlusG} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="icon inline-flex justify-center items-center w-10 h-10"
             >
               <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="icon inline-flex justify-center items-center w-10 h-10"
             >
               <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="icon inline-flex justify-center items-center w-10 h-10"
             >
               <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
+            </Link> */}
           </div>
-          <span>or use your email for registeration</span>
+          {/* <span>or use your email for registeration</span> */}
           <input
             type="text"
             value={registerName}
@@ -103,13 +102,13 @@ export default function Login() {
             className="bg-login-input w-full my-2 mx-0 py-2.5 px-4 rounded-lg focus:outline-primary"
             onChange={(e) => setRegisterPassword(e.target.value)}
           />
-          <Button
+          <button
             type="submit"
             variant="contained"
             className="bg-primary text-white font-montserrat font-semibold text-xs mt-5 px-12 py-2.5 rounded-lg tracking-wide"
           >
-            Sign Up
-          </Button>
+            REGISTRAR
+          </button>
         </form>
       </div>
       <div className="form-container sign-in">
@@ -117,34 +116,35 @@ export default function Login() {
           className="flex flex-col justify-center items-center h-full px-10 bg-white"
           onSubmit={loginSubmitHandler}
         >
-          <h1>Inicia sesión</h1>
+          <h1 className="text-2xl">Inicia sesión</h1>
           <div className="social-icons my-15">
-            <a
+            {/* <Link
               href="#"
               className="icon inline-flex justify-center items-center  r w-10 h-10"
             >
               <FontAwesomeIcon icon={faGooglePlusG} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="icon inline-flex justify-center items-center w-10 h-10"
             >
               <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="icon inline-flex justify-center items-center w-10 h-10"
-            >
+            >ç
+
               <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="icon inline-flex justify-center items-center w-10 h-10"
             >
               <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
+            </Link> */}
           </div>
-          <span>o usa email y contreaseña</span>
+          {/* <span>o usa email y contreaseña</span> */}
           <input
             className="bg-login-input w-full my-2 mx-0 py-2.5 px-4 rounded-lg focus:outline-primary"
             type="email"
@@ -160,14 +160,14 @@ export default function Login() {
             onChange={(e) => setLoginPassword(e.target.value)}
           />
           <a href="#">Olvidaste la contraseña?</a>
-          <Button
+          <button
             type="submit"
             variant="contained"
             className="bg-primary text-white font-montserrat font-semibold text-xs mt-2.5 
             px-12 py-2.5 rounded-lg tracking-wide"
           >
-            Login
-          </Button>
+            LOGIN
+          </button>
         </form>
       </div>
       <div className="toggle-container">
@@ -175,14 +175,13 @@ export default function Login() {
           <div className="toggle-panel toggle-left">
             <h1>Welcome Back!</h1>
             <p>Enter your personal details to use all of site features</p>
-            <Button
+            <button
               onClick={() => setIsActive(false)}
               className="bg-transparent text-white font-montserrat font-semibold text-xs mt-2.5 
-              px-12 py-2.5 rounded-lg tracking-wide border-white hover:border-white hover:bg-transparent"
-              variant="outlined"
+              px-12 py-2.5 rounded-lg tracking-wide border-white border hover:border-white hover:bg-transparent"
             >
-              Login
-            </Button>
+              LOGIN
+            </button>
           </div>
           <div className="toggle-panel toggle-right">
             <h1>Buenas, Trader!</h1>
@@ -190,13 +189,13 @@ export default function Login() {
               Regístrate con tus datos personales para utilizar todas las
               funciones del sitio.
             </p>
-            <Button
+            <button
               onClick={() => setIsActive(true)}
-              className="bg-transparent text-white font-montserrat font-semibold text-xs mt-2.5 px-12 py-2.5 rounded-lg tracking-wide border-white hover:border-white hover:bg-transparent"
+              className="bg-transparent text-white font-montserrat font-semibold text-xs mt-2.5 px-12 py-2.5 rounded-lg tracking-wide border border-white hover:border-white hover:bg-transparent"
               variant="outlined"
             >
-              Registrar
-            </Button>
+              REGISTRAR
+            </button>
           </div>
         </div>
       </div>

@@ -19,9 +19,10 @@ module.exports = {
         bold: 700,
       },
       colors: {
-        basicwhite: "#FFFFFF",
-        basicblack: "#1F1F1F",
         primary: "#246EDE",
+        "secondary-white": "#FFFFFF",
+        "secundary-black": "#1F1F1F",
+        "bg-white": "#f9fafb",
         "auths-border": "#ccc",
         "login-input": "#eeeeee",
       },

@@ -14,9 +14,15 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col bg-basicwhite w-full h-full">
-        <div className="flex flex-row justify-between mt-3 px-4 py-2 bg-basicwhite">
-          <h1 className="font-bold text-2xl">Lista de Torneos</h1>
+      <div className="flex flex-col items-center bg-basicwhite w-full h-full">
+        <div className="flex flex-row mt-3 w-full bg-basicwhite">
+          <div>
+            <HorizontalTabs
+              backgroundColor="#FFFFFF"
+              highlightColor="#246EDE"
+              tabs={tabs}
+            />
+          </div>
           <div className="flex justify-center items-center">
             <img
               className="h-8 w-8 rounded-full mr-2"
@@ -26,14 +32,7 @@ export default function Home() {
             <p className="text-base font-normal">Sergio Garcia Gasco</p>
           </div>
         </div>
-        <div className="bg-basicwhite mt-1 ml-1">
-          <HorizontalTabs
-            backgroundColor="#FFFFFF"
-            highlightColor="#246EDE"
-            tabs={tabs}
-          />
-        </div>
-        <div className="bg-basicwhite mt-1 ml-1 flex flex-row flex-wrap">
+        <div className="bg-basicwhite mt-8 ml-8 flex flex-row flex-wrap">
           <TournamentCard
             name="Alpha Tournament"
             startDate="2024-01-25"

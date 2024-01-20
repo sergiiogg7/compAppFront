@@ -1,27 +1,20 @@
-/* HorizontalTabs.module.css */
 .tabList {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  border-bottom: 1px solid black; /* Línea debajo de toda la lista */
+  border-bottom: 1px solid var(--primary-black);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.25rem;
 }
 
 .tab {
-  color: #1f1f1f;
+  color: var(--secondary-black);
   padding: 12px 16px;
   cursor: pointer;
-  /* Elimina la transición para evitar cualquier efecto al hacer clic */
-}
-
-.tab:not(:last-child) {
-  margin-right: 10px; /* Espacio entre los elementos de la lista */
 }
 
 .active {
-  /* Estilo para el elemento activo: subrayado */
-  border-bottom: 2px solid #246ede; /* Ajusta el color según necesites */
+  border-bottom: 2px solid var(--primary);
 }

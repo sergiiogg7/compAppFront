@@ -9,18 +9,23 @@ import {
   Title,
   Card,
 } from "@tremor/react";
+import Search from "./Search";
 
 export default function RankingTable({ competitors }) {
   return (
     <Card className="mt-8">
-      <Title>Users Ranking</Title>
+      <Title>Ranking</Title>
       <Text>Comparison between the participants of the tournament.</Text>
+
+      <Search />
+
       <Table className="mt-4">
         <TableHead>
           <TableRow>
             <TableHeaderCell>Name</TableHeaderCell>
-            <TableHeaderCell>Username</TableHeaderCell>
-            <TableHeaderCell>Email</TableHeaderCell>
+            <TableHeaderCell>Number Account</TableHeaderCell>
+            <TableHeaderCell>Starting Balance</TableHeaderCell>
+            <TableHeaderCell>Profit</TableHeaderCell>
           </TableRow>
         </TableHead>
         <TableBody>

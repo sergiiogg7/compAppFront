@@ -4,19 +4,36 @@ import { Card, AreaChart, Title, Text } from "@tremor/react";
 
 const data = [
   {
-    Month: "Jan 21",
-    Sales: 2890,
-    Profit: 2400,
+    Month: "Jan 01",
+    Equity: 1200,
   },
   {
-    Month: "Feb 21",
-    Sales: 1890,
-    Profit: 1398,
+    Month: "Jan 02",
+    Equity: 1500,
   },
   {
-    Month: "Jan 22",
-    Sales: 3890,
-    Profit: 2980,
+    Month: "Jan 03",
+    Equity: 3000,
+  },
+  {
+    Month: "Jan 04",
+    Equity: 2500,
+  },
+  {
+    Month: "Jan 05",
+    Equity: 3780,
+  },
+  {
+    Month: "Jan 06",
+    Equity: 4500,
+  },
+  {
+    Month: "Jan 07",
+    Equity: 4000,
+  },
+  {
+    Month: "Jan 08",
+    Equity: 7000,
   },
 ];
 
@@ -28,9 +45,9 @@ export default function Chart() {
       <AreaChart
         className="mt-4 h-80"
         data={data}
-        categories={["Sales", "Profit"]}
-        index="Month"
-        colors={["indigo", "fuchsia"]}
+        categories={["Equity"]}
+        index="Day"
+        colors={["blue"]}
         valueFormatter={(number) =>
           `$ ${Intl.NumberFormat("us").format(number).toString()}`
         }

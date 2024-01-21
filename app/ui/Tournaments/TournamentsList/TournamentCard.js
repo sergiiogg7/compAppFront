@@ -63,9 +63,7 @@ const TournamentCard = ({
             />
           </svg>
           <Text className="ml-2 font-light">
-            Cuentas totales:{" "}
-            <span className="font-semibold">{totalCompetitors}</span>{" "}
-            competidores
+            Cuentas totales: {totalCompetitors} competidores
           </Text>
         </Flex>
         <Text className="text-primary mt-4">Top 3 winners get:</Text>

@@ -13,11 +13,12 @@ module.exports = {
     extend: {
       colors: {
         //Custom colors
-        basicwhite: "#FFFFFF",
-        basicblack: "#1F1F1F",
-        primary: "#246EDE",
+        "bg-white": "#f9fafb",
+        "secondary-white": "#FFFFFF",
+        "secundary-black": "#1F1F1F",
         "auths-border": "#ccc",
         "login-input": "#eeeeee",
+        primary: "#246EDE",
         // light mode
         tremor: {
           brand: {

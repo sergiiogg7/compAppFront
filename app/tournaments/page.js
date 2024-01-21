@@ -37,7 +37,7 @@ export default function Home() {
               </svg>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              <a className="border-slate-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              <a className="border-primary text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                 Upcoming
               </a>
               <a className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
@@ -110,75 +110,6 @@ export default function Home() {
           />
         </div>
       </div>
-      {/* <div className="flex flex-col items-center bg-basicwhite w-full h-full">
-        <div className="flex flex-row mt-3 w-full bg-basicwhite">
-          <div>
-            <HorizontalTabs
-              backgroundColor="#FFFFFF"
-              highlightColor="#246EDE"
-              tabs={tabs}
-            />
-          </div>
-          <div className="flex justify-center items-center">
-            <img
-              className="h-8 w-8 rounded-full mr-2"
-              src="https://ui-avatars.com/api?name=Sergio+Garcia"
-              alt="Sergio Garcia"
-            />
-            <p className="text-base font-normal">Sergio Garcia Gasco</p>
-          </div>
-        </div>
-        <div className="bg-basicwhite mt-8 ml-8 flex flex-row flex-wrap">
-          <TournamentCard
-            name="Alpha Tournament"
-            startDate="2024-01-25"
-            endDate="2024-02-05"
-            timeRemaining="10 days"
-            totalCompetitors="100"
-            prizes="1st Prize: $1000"
-          />
-          <TournamentCard
-            name="Alpha Tournament"
-            startDate="2024-01-25"
-            endDate="2024-02-05"
-            timeRemaining="10 days"
-            totalCompetitors="100"
-            prizes="1st Prize: $1000"
-          />
-          <TournamentCard
-            name="Alpha Tournament"
-            startDate="2024-01-25"
-            endDate="2024-02-05"
-            timeRemaining="10 days"
-            totalCompetitors="100"
-            prizes="1st Prize: $1000"
-          />
-          <TournamentCard
-            name="Alpha Tournament"
-            startDate="2024-01-25"
-            endDate="2024-02-05"
-            timeRemaining="10 days"
-            totalCompetitors="100"
-            prizes="1st Prize: $1000"
-          />
-          <TournamentCard
-            name="Alpha Tournament"
-            startDate="2024-01-25"
-            endDate="2024-02-05"
-            timeRemaining="10 days"
-            totalCompetitors="100"
-            prizes="1st Prize: $1000"
-          />
-          <TournamentCard
-            name="Alpha Tournament"
-            startDate="2024-01-25"
-            endDate="2024-02-05"
-            timeRemaining="10 days"
-            totalCompetitors="100"
-            prizes="1st Prize: $1000"
-          />
-        </div>
-      </div> */}
     </>
   );
 }

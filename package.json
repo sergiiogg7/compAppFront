@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "@babel/core": "^7.23.7",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@heroicons/react": "^2.1.1",
+    "@mui/icons-material": "^5.15.6",
+    "@mui/material": "^5.15.6",
     "@tremor/react": "^3.13.2",
     "axios": "^1.6.5",
     "cookie": "^0.6.0",

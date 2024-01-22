@@ -5,6 +5,8 @@ import HorizontalTabs from "../ui/Tournaments/TournamentsList/HorizontalTabs";
 import TournamentCard from "../ui/Tournaments/TournamentsList/TournamentCard";
 import React, { useEffect, useState, useContext } from "react";
 import Image from "next/image";
+import Search from "../ui/Tournaments/Search";
+import { Button } from "@tremor/react";
 
 export default function Home() {
   const { login, loading, user, isAuthenticated } = useContext(AuthContext);
@@ -14,11 +16,22 @@ export default function Home() {
     console.log(user);
   }, []);
 
+  const createTournament = () => {};
+
   return (
     <>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <NavBar></NavBar>
-        <div className="flex flex-wrap justify-center p-4 md:p-10 max-w-7xl gap-3 md:gap-4 lg:gap-6">
+        <div className="flex justify-between">
+          <Search />
+          <button
+            onClick={createTournament}
+            className="bg-primary text-white font-montserrat font-semibold text-xs mt-5 px-8 py-2.5 mr-3 rounded-lg tracking-wide"
+          >
+            Create
+          </button>
+        </div>
+        <div className="flex flex-wrap mt-4 md:mt-8 gap-3 md:gap-4 lg:gap-6">
           <TournamentCard
             name="Alpha Tournament"
             startDate="2024-01-25"

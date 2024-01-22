@@ -1,8 +1,8 @@
 // HorizontalTabs.jsx
-import React, { useState } from "react";
 import styles from "./HorizontalTabs.module.css";
+import React, { useState } from "react";
 
-const HorizontalTabs = ({ tabs }) => {
+export default function HorizontalTabs() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
@@ -18,6 +18,4 @@ const HorizontalTabs = ({ tabs }) => {
       ))}
     </ul>
   );
-};
-
-export default HorizontalTabs;
+}

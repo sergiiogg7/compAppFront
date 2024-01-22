@@ -1,6 +1,6 @@
 import { Card, Title, Flex, Text } from "@tremor/react";
 
-const NavBar = () => {
+export default function NavBar() {
   return (
     <>
       <div className="flex h-16 justify-between">
@@ -48,6 +48,4 @@ const NavBar = () => {
       </div>
     </>
   );
-};
-
-export default NavBar;
+}

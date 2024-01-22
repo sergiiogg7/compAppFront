@@ -9,7 +9,7 @@ import {
   Title,
   Card,
 } from "@tremor/react";
-import Search from "./Search";
+import Search from "../Search";
 
 export default function RankingTable({ competitors }) {
   return (

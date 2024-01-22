@@ -1,7 +1,8 @@
-import { Title, Card, Flex, Text, Subtitle } from "@tremor/react";
+"use client";
 import React, { useState } from "react";
+import { Title, Card, Flex, Text, Subtitle } from "@tremor/react";
 
-const CreateTournament = ({}) => {
+export default function CreateTournamentPage() {
   return (
     <>
       <div>
@@ -14,6 +15,4 @@ const CreateTournament = ({}) => {
       </div>
     </>
   );
-};
-
-export default CreateTournament;
+}

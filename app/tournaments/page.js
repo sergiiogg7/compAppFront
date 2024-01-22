@@ -1,16 +1,16 @@
 "use client";
+import React, { useEffect, useState, useContext } from "react";
+
 import AuthContext from "../contexts/AuthContext";
 import NavBar from "../ui/navbar";
-import HorizontalTabs from "../ui/Tournaments/TournamentsList/HorizontalTabs";
 import TournamentCard from "../ui/Tournaments/TournamentsList/TournamentCard";
-import React, { useEffect, useState, useContext } from "react";
-import Image from "next/image";
 import Search from "../ui/Tournaments/Search";
-import { Button } from "@tremor/react";
 
-export default function Home() {
+export default function TournamentList() {
   const { login, loading, user, isAuthenticated } = useContext(AuthContext);
+
   const tabs = ["Upcoming", "Ongoing", "End", "Participated"];
+
   useEffect(() => {
     console.log(isAuthenticated);
     console.log(user);

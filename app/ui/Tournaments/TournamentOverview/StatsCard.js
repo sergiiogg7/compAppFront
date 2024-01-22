@@ -1,7 +1,7 @@
-import { Title, Card, Flex, Text, Subtitle } from "@tremor/react";
 import React, { useState } from "react";
+import { Title, Card, Flex, Text, Subtitle } from "@tremor/react";
 
-const StatsCard = ({ title, svgCode, value }) => {
+export default function ({ title, svgCode, value }) {
   return (
     <>
       <Card className="flex flex-col min-w-52 max-w-52">
@@ -19,6 +19,4 @@ const StatsCard = ({ title, svgCode, value }) => {
       </Card>
     </>
   );
-};
-
-export default StatsCard;
+}

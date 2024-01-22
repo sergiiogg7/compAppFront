@@ -1,13 +1,14 @@
-import { Card, Title, Flex, Text } from "@tremor/react";
 import { useRouter } from "next/navigation";
-const TournamentCard = ({
+import { Card, Title, Flex, Text } from "@tremor/react";
+
+export default function TournamentCard({
   name,
   startDate,
   endDate,
   timeRemaining,
   totalCompetitors,
   prizes,
-}) => {
+}) {
   const router = useRouter();
 
   const viewTournament = () => {
@@ -144,6 +145,4 @@ const TournamentCard = ({
       </Card>
     </>
   );
-};
-
-export default TournamentCard;
+}

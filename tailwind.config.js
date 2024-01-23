@@ -13,6 +13,8 @@ module.exports = {
     extend: {
       colors: {
         //Custom colors
+        "error-light": "#d32f2f",
+        "success-light": "#4CAF50",
         "bg-white": "#f9fafb",
         "secondary-white": "#FFFFFF",
         "secundary-black": "#1F1F1F",

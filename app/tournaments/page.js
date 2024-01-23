@@ -26,7 +26,7 @@ export default function TournamentList() {
           <Search />
           <button
             onClick={createTournament}
-            className="bg-primary text-white font-montserrat font-semibold text-xs mt-5 px-8 py-2.5 mr-3 rounded-lg tracking-wide"
+            className="bg-primary text-white font-montserrat font-semibold text-xs mt-5 px-8 mr-3 rounded-lg tracking-wide"
           >
             Create
           </button>

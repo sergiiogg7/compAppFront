@@ -1,4 +1,5 @@
 import { Card, Title, Flex, Text } from "@tremor/react";
+import DropDownMenu from "./DropDownMenu";
 
 export default function NavBar() {
   return (
@@ -38,12 +39,8 @@ export default function NavBar() {
             </a>
           </div>
         </div>
-        <div className="hidden sm:ml-6 sm:flex sm:items-center">
-          <img
-            className="h-8 w-8 rounded-full mr-2"
-            src="https://ui-avatars.com/api?name=Sergio+Garcia"
-            alt="Sergio Garcia"
-          />
+        <div className="ml-6 flex items-center">
+          <DropDownMenu />
         </div>
       </div>
     </>

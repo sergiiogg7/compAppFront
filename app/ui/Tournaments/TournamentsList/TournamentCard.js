@@ -14,6 +14,9 @@ export default function TournamentCard({
   const viewTournament = () => {
     router.push("/tournaments/1");
   };
+  const enroll = () => {
+    router.replace("/tournament");
+  };
   return (
     <>
       <Card className="flex flex-col w-1/2.5">
@@ -136,12 +139,20 @@ export default function TournamentCard({
             </Text>
           </div>
         </Flex>
-        <button
-          onClick={viewTournament}
-          className="bg-primary text-white font-montserrat font-semibold text-xs px-12 py-2.5 rounded-lg tracking-wide w-full h-10"
-        >
-          Inscribirse
-        </button>
+        <div className="flex flex-row space-x-2">
+          <button
+            onClick={enroll}
+            className="bg-primary text-white font-montserrat font-semibold text-xs px-8 py-2.5 rounded-lg tracking-wide w-full h-10 basis-0 flex-grow"
+          >
+            Inscribirse
+          </button>
+          <button
+            onClick={viewTournament}
+            className="bg-secundary-black text-white font-montserrat font-semibold text-xs px-8 py-2.5 rounded-lg tracking-wide w-full h-10 basis-0 flex-grow"
+          >
+            Ver
+          </button>
+        </div>
       </Card>
     </>
   );

@@ -3,11 +3,11 @@ import React, { useEffect, useState, useContext } from "react";
 import { useRouter } from "next/navigation";
 
 import NavBar from "@/app/ui/navbar";
+import cardData from "@/app/data/cardData";
+import competitorsData from "@/app/data/competitorsData";
 import Chart from "@/app/ui/Tournaments/TournamentOverview/Chart";
 import StatsCard from "@/app/ui/Tournaments/TournamentOverview/StatsCard";
 import RankingTable from "@/app/ui/Tournaments/TournamentOverview/RankingTable";
-import competitorsData from "@/app/data/competitorsData";
-import cardData from "@/app/data/cardData";
 
 export default function TournamentOverviewPage() {
   const router = useRouter();

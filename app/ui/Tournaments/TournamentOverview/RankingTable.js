@@ -10,14 +10,17 @@ import {
   Card,
 } from "@tremor/react";
 import Search from "../Search";
+import UpdateProfitDialog from "./UpdateProfitDialog";
 
 export default function RankingTable({ competitors }) {
   return (
     <Card className="mt-8">
       <Title>Ranking</Title>
       <Text>Comparison between the participants of the tournament.</Text>
-
-      <Search />
+      <div className="flex mt-3 justify-between items-center">
+        <Search />
+        <UpdateProfitDialog />
+      </div>
 
       <Table className="mt-4">
         <TableHead>

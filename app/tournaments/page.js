@@ -5,18 +5,23 @@ import AuthContext from "../contexts/AuthContext";
 import NavBar from "../ui/navbar";
 import TournamentCard from "../ui/Tournaments/TournamentsList/TournamentCard";
 import Search from "../ui/Tournaments/Search";
+import { useRouter } from "next/navigation";
 
 export default function TournamentList() {
   const { login, loading, user, isAuthenticated } = useContext(AuthContext);
 
   const tabs = ["Upcoming", "Ongoing", "End", "Participated"];
 
+  const router = useRouter();
+
   useEffect(() => {
     console.log(isAuthenticated);
     console.log(user);
   }, []);
 
-  const createTournament = () => {};
+  const createTournament = () => {
+    router.replace("/tournament");
+  };
 
   return (
     <>

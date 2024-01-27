@@ -14,8 +14,11 @@ export default function DropDownMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const handleTournaments = () => {
+    router.replace("/tournaments");
+  };
   const handleOwnedTournaments = () => {
-    router.replace("/myTournaments");
+    router.replace("/mytournaments");
   };
   return (
     <div>
@@ -36,10 +39,16 @@ export default function DropDownMenu() {
         }}
       >
         <MenuItem
+          onClick={handleTournaments}
+          className="text-gray-900 text-sm font-medium"
+        >
+          Tournaments
+        </MenuItem>
+        <MenuItem
           onClick={handleOwnedTournaments}
           className="text-gray-900 text-sm font-medium"
         >
-          Owned Tournaments
+          My Tournaments
         </MenuItem>
         <MenuItem
           onClick={handleClose}

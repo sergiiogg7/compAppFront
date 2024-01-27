@@ -1,7 +1,12 @@
 import { Card, Title, Flex, Text } from "@tremor/react";
 import DropDownMenu from "./DropDownMenu";
+import HorizontalMenu from "./HorizontalMenu";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
+  const pathname = usePathname();
+  const isActive = pathname === "/tournaments";
+
   return (
     <>
       <div className="flex h-16 justify-between">
@@ -24,20 +29,7 @@ export default function NavBar() {
               />
             </svg>
           </div>
-          <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-            <a className="border-primary text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              Upcoming
-            </a>
-            <a className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              Ongoing
-            </a>
-            <a className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              End
-            </a>
-            <a className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              Participated
-            </a>
-          </div>
+          {isActive ? <HorizontalMenu /> : ""}
         </div>
         <div className="ml-6 flex items-center">
           <DropDownMenu />

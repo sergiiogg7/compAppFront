@@ -61,6 +61,10 @@ export default function CreateTournamentPage() {
                   <TextInput placeholder="" />
                 </div>
                 <div className="flex flex-col w-full">
+                  <Text className="mb-2 ml-1">Initial Date</Text>
+                  <DatePicker />
+                </div>
+                <div className="flex flex-col w-full">
                   <Text className="mb-2 ml-1">End Date</Text>
                   <DatePicker />
                 </div>
